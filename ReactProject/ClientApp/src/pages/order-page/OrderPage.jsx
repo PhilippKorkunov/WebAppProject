@@ -18,7 +18,7 @@ const OrderPage = () => {
         
         
         useEffect(() => {
-            axios.get("https://localhost:7072/api/WebApp/GetOrder", { params: { Id: params.id } })
+            axios.get(address, { params: { Id: params.id } })
                  .then(response =>  setData(response.data[0]))
                  .catch(err => console.log(err))
 
