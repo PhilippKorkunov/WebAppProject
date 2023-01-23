@@ -8,6 +8,15 @@ const OrderPage = () => {
         const params = useParams();
         const [data, setData] = useState({});
 
+        
+        
+        //Для IISExpres:
+        const address = "https://localhost:44431/api/WebApp/GetOrder"
+
+        //const address = "https://localhost:7072/api/WebApp/GetOrder"
+        
+        
+        
         useEffect(() => {
             axios.get("https://localhost:7072/api/WebApp/GetOrder", { params: { Id: params.id } })
                  .then(response =>  setData(response.data[0]))
