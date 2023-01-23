@@ -13,7 +13,7 @@ const Orders = () => {
     //const address = "https://localhost:7072/api/WebApp/GetAllOrders"
 
     useEffect(() => {
-        axios.get("https://localhost:7072/api/WebApp/GetAllOrders")
+        axios.get(address)
              .then(response => setData(response.data))
              .catch(err => console.log(err))
     }, [])
