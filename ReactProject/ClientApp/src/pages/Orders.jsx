@@ -6,6 +6,11 @@ import {Link} from "react-router-dom";
 const Orders = () => {
 
     const [data, setData] = useState([]);
+    
+    //Для IISExpres:
+    const address = "https://localhost:44431/api/WebApp/GetAllOrders"
+
+    //const address = "https://localhost:7072/api/WebApp/GetAllOrders"
 
     useEffect(() => {
         axios.get("https://localhost:7072/api/WebApp/GetAllOrders")
