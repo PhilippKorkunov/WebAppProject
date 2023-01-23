@@ -16,7 +16,7 @@ const FormPage = () => {
     //const address = "https://localhost:7072/api/WebApp/AddOrder"
     
     const onFinish = async (values) => {
-        await axios.post("https://localhost:7072/api/WebApp/AddOrder", values)
+        await axios.post(address, values)
         form.resetFields()
     };
     const onFinishFailed = (errorInfo) => {
