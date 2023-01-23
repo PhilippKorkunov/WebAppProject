@@ -9,6 +9,12 @@ const { Title } = Typography;
 
 const FormPage = () => {
     const [form] = Form.useForm();
+    
+    //Для IISExpres:
+    const address = "https://localhost:44431/api/WebApp/AddOrder"
+
+    //const address = "https://localhost:7072/api/WebApp/AddOrder"
+    
     const onFinish = async (values) => {
         await axios.post("https://localhost:7072/api/WebApp/AddOrder", values)
         form.resetFields()
